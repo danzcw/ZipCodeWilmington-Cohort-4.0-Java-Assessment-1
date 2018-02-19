@@ -40,7 +40,7 @@ public class StringUtilsTest {
     public void reverseFirstWordTest() {
         // Given
         String inputString = "Noel Hunter";
-        String expected = "Leon";
+        String expected = "leoN";
 
         // When
         String actual = StringUtils.reverseFirstWord(inputString);

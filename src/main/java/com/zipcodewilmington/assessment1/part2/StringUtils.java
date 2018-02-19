@@ -11,7 +11,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        String[] words = sentence.split(" ");
+
+        return words;
     }
 
 
@@ -21,7 +23,10 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] words = sentence.split(" ");
+        String first = words[0];
+
+        return first;
     }
 
     /**
@@ -30,8 +35,21 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+
+        String[] words = sentence.split(" ");
+        String first = words[0];
+        String flip = "";
+
+        for (int x = first.length() -1; x >= 0; x--) {
+            flip +=  first.charAt(x);
+        }
+
+
+
+        return flip;
     }
+
+
 
     /**
      * @param sentence a string containing words delimited by spaces, representative of a sentence
@@ -39,7 +57,18 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+
+        String[] words = sentence.split(" ");
+        String first = words[0];
+        String flip = "";
+
+        for (int x = first.length() - 1; x >= 0; x--) {
+            flip += first.charAt(x);
+        }
+
+
+        String cap = flip.substring(1, 2).toUpperCase() + flip.substring(2);
+        return cap;
     }
 
 
@@ -50,7 +79,11 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder check = new StringBuilder(str);
+          check.deleteCharAt(index);
+          String answer = check.toString();
+
+        return answer;
     }
 
 }
