@@ -67,7 +67,7 @@ public class StringUtils {
         }
 
 
-        String cap = flip.substring(1, 2).toUpperCase() + flip.substring(2);
+        String cap = flip.substring(0, 1).toUpperCase() + flip.substring(1);
         return cap;
     }
 

@@ -56,7 +56,7 @@ public class StringUtilsTest {
         String expected = "Leon";
 
         // When
-        String actual = StringUtils.reverseFirstWord(inputString);
+        String actual = StringUtils.reverseFirstWordThenCamelCase(inputString);
 
         // Then
         Assert.assertEquals(expected, actual);
