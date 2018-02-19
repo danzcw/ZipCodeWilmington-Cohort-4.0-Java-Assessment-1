@@ -7,8 +7,13 @@ public class Jumper {
      */
     public int jumps(int k, int j) {
 
+        int bigJumps = Math.round(k/j);
+        int littJumps = (k % j);
+
+        int total = bigJumps +littJumps;
 
 
-        return -1;
+
+        return total;
     }
 }
