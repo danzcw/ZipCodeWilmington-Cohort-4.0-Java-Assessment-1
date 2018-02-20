@@ -14,8 +14,7 @@ public class IntegerUtils {
 
         Integer sum = 0;
 
-
-        for (int x = 1; x < n; x++) {
+        for (int x = 1; x <= n; x++) {
                 sum = sum + x;
         }
 

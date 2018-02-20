@@ -20,8 +20,7 @@ public class RockPaperSissorsEvaluator {
             return SCISSOR;
         } else
             return ROCK;
-        }
-
+    }
 
 
     /**
@@ -45,56 +44,41 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
 
-        if (handSignOfPlayer1.equals(handSignOfPlayer2)) {
-            return "Shoot Again";
-        } else if (handSignOfPlayer1.equals(ROCK)) {
-            if (handSignOfPlayer2.equals(SCISSOR)) {
-                return ROCK;
-            }
-        } else if (handSignOfPlayer2.equals(ROCK)) {
-            if (handSignOfPlayer1.equals(SCISSOR)) {
-                return ROCK;
-            }
-        } else if (handSignOfPlayer1.equals(SCISSOR)) {
-            if (handSignOfPlayer2.equals(PAPER)) {
-                return SCISSOR;
-            }
-        } else if (handSignOfPlayer2.equals(SCISSOR)) {
-            if (handSignOfPlayer1.equals(PAPER)) {
-                return SCISSOR;
-            }
-        } else if (handSignOfPlayer1.equals(PAPER)) {
-            if (handSignOfPlayer2.equals(ROCK)) {
-                return PAPER;
-            }
-        } else if (handSignOfPlayer2.equals(PAPER)) {
-            if (handSignOfPlayer1.equals(ROCK)) {
-                return PAPER;
-            }
+        if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(SCISSOR)) {
+            return ROCK;
+
+        } else if (handSignOfPlayer2.equals(ROCK) && handSignOfPlayer1.equals(SCISSOR)) {
+            return ROCK;
+
+        } else if (handSignOfPlayer1.equals(SCISSOR) && handSignOfPlayer2.equals(PAPER)) {
+            return SCISSOR;
+
+        } else if (handSignOfPlayer2.equals(SCISSOR) && handSignOfPlayer1.equals(PAPER)) {
+            return SCISSOR;
+
+        } else if (handSignOfPlayer1.equals(SCISSOR) && handSignOfPlayer2.equals(ROCK)) {
+            return ROCK;
+
+        } else if (handSignOfPlayer2.equals(SCISSOR) && handSignOfPlayer1.equals(ROCK)) {
+            return ROCK;
+
+        } else if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(ROCK)) {
+            return PAPER;
+
+        } else if (handSignOfPlayer2.equals(PAPER) && handSignOfPlayer1.equals(ROCK)) {
+            return PAPER;
+        } else if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(SCISSOR)) {
+            return SCISSOR;
+
+        } else if (handSignOfPlayer2.equals(PAPER) && handSignOfPlayer1.equals(SCISSOR)) {
+            return SCISSOR;
+        } else if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(PAPER)) {
+            return PAPER;
+        } else if (handSignOfPlayer2.equals(ROCK) && handSignOfPlayer1.equals(PAPER)) {
+            return PAPER;
+
+
         }
-
-
-//        if (handSignOfPlayer1.equals(ROCK)) {
-//            if (handSignOfPlayer2.equals(PAPER)) {
-//                return PAPER;
-//            } else if (handSignOfPlayer2.equals(SCISSOR)) {
-//                return ROCK;
-//            }
-//        } else if (handSignOfPlayer1.equals(SCISSOR)) {
-//            if (handSignOfPlayer2.equals(ROCK)) {
-//                return ROCK;
-//            } else if (handSignOfPlayer2.equals(PAPER)) {
-//                return SCISSOR;
-//            }
-//        } else if (handSignOfPlayer1.equals(PAPER)) {
-//            if (handSignOfPlayer2.equals(ROCK)) {
-//                return PAPER;
-//            } else if (handSignOfPlayer2.equals(SCISSOR)) {
-//                return SCISSOR;
-//
-//            }
-//        }
-//
         return null;
     }
 }
